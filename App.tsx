@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import type { Gift } from './types';
 import type { FormState } from './components/GiftForm';
@@ -33,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white font-sans antialiased">
+    <div className="min-h-screen bg-[#121212] text-gray-200 font-sans antialiased">
       <main className="container mx-auto px-4 py-8 md:py-12">
         <Header />
         <div className="max-w-2xl mx-auto">
@@ -48,7 +47,7 @@ function App() {
           />
         </div>
       </main>
-       <footer className="text-center py-6 text-gray-500 text-sm">
+       <footer className="text-center py-6 text-gray-400 text-sm">
         <p>Powered by AI. Gift ideas are suggestions and should be considered carefully.</p>
       </footer>
     </div>

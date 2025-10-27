@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { Gift } from '../types';
 
@@ -8,14 +7,14 @@ interface GiftCardProps {
 
 const CategoryBadge: React.FC<{ category: string }> = ({ category }) => {
     const colors: { [key: string]: string } = {
-        Tech: 'bg-blue-500/20 text-blue-300',
-        Fashion: 'bg-pink-500/20 text-pink-300',
-        Gaming: 'bg-purple-500/20 text-purple-300',
-        Books: 'bg-yellow-500/20 text-yellow-300',
-        Art: 'bg-red-500/20 text-red-300',
-        Sports: 'bg-green-500/20 text-green-300',
-        Experiences: 'bg-indigo-500/20 text-indigo-300',
-        DIY: 'bg-orange-500/20 text-orange-300',
+        Tech: 'bg-blue-400/20 text-blue-300',
+        Fashion: 'bg-teal-400/20 text-teal-300',
+        Gaming: 'bg-yellow-400/20 text-yellow-300',
+        Books: 'bg-orange-400/20 text-orange-300',
+        Art: 'bg-red-400/20 text-red-300',
+        Sports: 'bg-green-400/20 text-green-300',
+        Experiences: 'bg-indigo-400/20 text-indigo-300',
+        DIY: 'bg-amber-400/20 text-amber-300',
     };
     const colorClass = colors[category] || 'bg-gray-500/20 text-gray-300';
     return (
@@ -31,7 +30,7 @@ export const GiftCard: React.FC<GiftCardProps> = ({ gift }) => {
   const seed = gift.name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
 
   return (
-    <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-purple-500/20">
+    <div className="bg-[#202124] rounded-lg shadow-lg overflow-hidden flex flex-col transition-all duration-300 hover:ring-2 hover:ring-offset-2 hover:ring-offset-[#121212] hover:ring-blue-500">
       <img
         src={`https://picsum.photos/seed/${seed}/400/300`}
         alt={gift.name}
@@ -44,7 +43,7 @@ export const GiftCard: React.FC<GiftCardProps> = ({ gift }) => {
         </div>
         <p className="text-gray-400 text-sm mb-4 flex-grow">{gift.description}</p>
         <div className="mt-auto pt-4 border-t border-gray-700">
-          <p className="text-sm font-semibold text-purple-400">{gift.priceRange}</p>
+          <p className="text-sm font-semibold text-blue-400">{gift.priceRange}</p>
         </div>
       </div>
     </div>
